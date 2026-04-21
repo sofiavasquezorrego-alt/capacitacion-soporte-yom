@@ -677,14 +677,14 @@ const LESSONS = [
   {
     tag: "Módulo 1 · Antes de reportar",
     tagColor: "cyan",
-    title: "Empezá por casa",
+    title: "Empieza por casa",
     subtitle: "Tres reglas básicas que aplican antes de tocar el canal de soporte.",
     body: `
       <div class="cards-3">
         <div class="tile cyan">
           <div class="tile-tag">Regla 1</div>
           <h3>Revisión previa</h3>
-          <p>Antes de escalar, verificá que el error no venga de tu propio sistema o configuración. Solo si lo descartás, se reporta a YOM.</p>
+          <p>Antes de escalar, verifica que el error no venga de tu propio sistema o configuración. Solo si lo descartas, se reporta a YOM.</p>
         </div>
         <div class="tile cyan">
           <div class="tile-tag">Regla 2</div>
@@ -698,7 +698,7 @@ const LESSONS = [
         </div>
       </div>
       <div class="hint">
-        <strong>¿Por qué importa?</strong> Este filtro inicial evita que el canal de soporte se sature con casos que no son responsabilidad de YOM, y acelera la resolución de los que sí lo son.
+        <strong>¿Por qué importa?</strong> Este filtro inicial permite que el equipo de soporte se enfoque en los casos donde YOM puede ayudar, y así resolverlos más rápido.
       </div>
     `
   },
@@ -706,7 +706,7 @@ const LESSONS = [
     tag: "Módulo 2 · Los 3 niveles",
     tagColor: "purple",
     title: "Tres niveles, un criterio",
-    subtitle: "YOM clasifica cada ticket por impacto operacional real, no por percepción. Estos son los tres niveles que existen.",
+    subtitle: "YOM clasifica cada ticket según su impacto operacional. Estos son los tres niveles que existen.",
     body: `
       <div class="cards-3">
         <div class="tile red">
@@ -722,7 +722,7 @@ const LESSONS = [
         <div class="tile green">
           <div class="tile-tag">🟢 Nivel 3</div>
           <h3>Bajo</h3>
-          <p>Todo fluye. Son <b>fricciones menores</b>, consultas o mejoras.</p>
+          <p>Todo fluye. Son <b>fricciones menores</b>, errores visuales o problemas con workaround.</p>
         </div>
       </div>
       <p class="desc" style="margin-top:18px;">En los próximos módulos vemos cada nivel en detalle con ejemplos y SLAs.</p>
@@ -732,23 +732,23 @@ const LESSONS = [
     tag: "Módulo 2.1 · Nivel 1",
     tagColor: "red",
     title: "🔴 Nivel 1 · Crítico",
-    subtitle: "El flujo de transacciones está completamente bloqueado, sin ninguna forma de operar.",
+    subtitle: "El flujo de transacciones está bloqueado o severamente afectado. Una parte significativa de la operación no puede continuar.",
     body: `
       <div class="two-col">
         <div class="col-panel">
           <h3>Características</h3>
           <ul class="list-items">
-            <li>Todos los vendedores <b>no pueden</b> confirmar ni enviar pedidos</li>
-            <li>La app <b>no sincroniza</b> para ningún vendedor</li>
-            <li>Los pedidos son <b>rechazados</b> por el sistema para todos los clientes</li>
+            <li>Una <b>parte significativa</b> de los vendedores no puede confirmar ni enviar pedidos</li>
+            <li>La app <b>no sincroniza</b> para un porcentaje importante de la operación</li>
+            <li>Los pedidos son <b>rechazados</b> por el sistema de forma masiva o generalizada</li>
           </ul>
         </div>
         <div class="col-panel">
           <h3>Ejemplos reales</h3>
           <ul class="list-items">
             <li>Precios aparecen en <b>\$0</b> para múltiples clientes a la vez</li>
-            <li>La app dejó de sincronizar para <b>todos</b> los vendedores</li>
-            <li>El sistema rechaza <b>todos</b> los pedidos sin excepción</li>
+            <li>La app dejó de sincronizar para un <b>30% o más</b> de los vendedores</li>
+            <li>El sistema rechaza pedidos de forma <b>masiva</b></li>
           </ul>
         </div>
       </div>
@@ -798,15 +798,15 @@ const LESSONS = [
     tag: "Módulo 2.3 · Nivel 3",
     tagColor: "green",
     title: "🟢 Nivel 3 · Bajo",
-    subtitle: "Todo fluye con normalidad. Son fricciones menores, consultas o mejoras.",
+    subtitle: "Todo fluye con normalidad. Son fricciones menores, errores visuales o problemas con workaround.",
     body: `
       <div class="two-col">
         <div class="col-panel">
           <h3>Características</h3>
           <ul class="list-items">
-            <li>Consultas sobre uso o configuración</li>
-            <li>Errores menores que <b>no bloquean</b> la operación</li>
-            <li>Solicitudes de mejora o nuevas funcionalidades</li>
+            <li>Errores visuales o de interfaz sin impacto operativo</li>
+            <li>Problemas menores que tienen <b>workaround</b> y no bloquean la operación</li>
+            <li>Errores que <b>no afectan</b> el flujo de transacciones</li>
           </ul>
         </div>
         <div class="col-panel">
@@ -834,7 +834,7 @@ const LESSONS = [
     subtitle: "El reporte del cliente es insumo, pero no define la severidad del ticket.",
     body: `
       <div class="hint purple">
-        <strong>Regla clave:</strong> YOM asigna el nivel de severidad en función del <b>impacto operacional real</b>, no de la percepción del cliente. La clasificación definitiva la determina el equipo YOM tras verificar técnicamente el alcance.
+        <strong>Regla clave:</strong> YOM asigna el nivel de severidad en función del <b>impacto operacional verificado</b>. La clasificación definitiva la determina el equipo YOM tras verificar técnicamente el alcance.
       </div>
       <div class="two-col">
         <div class="col-panel">
@@ -907,7 +907,7 @@ const LESSONS = [
         </div>
       </div>
       <div class="hint">
-        <strong>Si llega mal canalizado a soporte:</strong> el equipo lo redirige internamente a quien corresponda para que reciba la atención adecuada.
+        <strong>Importante:</strong> para que cada tema reciba la atención adecuada, es clave dirigirlo al contacto correcto desde el inicio. El canal de soporte está reservado para problemas operativos en producción.
       </div>
     `
   },
@@ -932,7 +932,7 @@ const LESSONS = [
       <div class="sla-box amber">
         <div class="sla-title">Respuesta a pedidos de información</div>
         <div class="sla-row"><span class="lbl">Plazo máximo del cliente</span><span class="val">3 días hábiles</span></div>
-        <div class="sla-row"><span class="lbl">Si no hay respuesta</span><span class="val">Se cierra 24 h hábiles después</span></div>
+        <div class="sla-row"><span class="lbl">Si no hay respuesta</span><span class="val">El ticket se cierra automáticamente</span></div>
       </div>
     `
   },
@@ -946,7 +946,7 @@ const LESSONS = [
         <div class="col-panel">
           <h3>Canal oficial</h3>
           <p style="color:var(--text-secondary);font-size:14px;margin-bottom:10px;">Portal de Asistencia:</p>
-          <a class="res-link" href="https://soporte.yom.ai" target="_blank" rel="noopener">soporte.yom.ai <span class="arrow">↗</span></a>
+          <p style="font-weight:600;color:var(--accent-purple);font-size:16px;">soporte.yom.ai</p>
           <p style="color:var(--text-muted);font-size:13px;margin-top:8px;">Acceso solo para <b>supervisores y ejecutivos</b> de los clientes de YOM.</p>
         </div>
         <div class="col-panel">
@@ -972,7 +972,7 @@ const LESSONS = [
         <div class="intro-item"><div class="num">∞</div><div class="lbl">Intentos</div></div>
       </div>
       <div class="hint">
-        <strong>Cómo funciona:</strong> después de cada respuesta verás el feedback con el fundamento del protocolo. No es un examen — si te equivocás, aprendés.
+        <strong>Cómo funciona:</strong> después de cada respuesta verás el feedback con el fundamento del protocolo. No es un examen — si te equivocas, aprendes.
       </div>
     `,
     isTransition: true
@@ -995,7 +995,7 @@ const QUIZ = [
       "Consultarlo con otros clientes de YOM"
     ],
     answer: [1],
-    explanation: "El protocolo exige hacer una <strong>revisión previa</strong>: descartar que el error provenga del propio sistema o configuración antes de escalar a YOM. Así el canal queda libre para los casos que sí lo ameritan."
+    explanation: "El protocolo exige hacer una <strong>revisión previa</strong>: descartar que el error provenga del propio sistema o configuración antes de escalar a YOM. Así el equipo puede enfocarse en resolver los problemas donde YOM puede ayudar."
   },
   {
     section: "Gestión de usuarios",
@@ -1014,7 +1014,7 @@ const QUIZ = [
   {
     section: "Clasificación · Nivel 1",
     tagColor: "red",
-    question: "Escenario: «Todos los vendedores no pueden confirmar pedidos. La app no sincroniza para nadie y los pedidos son rechazados por el sistema.» ¿Qué nivel de soporte corresponde?",
+    question: "Escenario: «Gran parte de los vendedores no pueden confirmar pedidos. La app no sincroniza para un porcentaje significativo y los pedidos son rechazados de forma masiva.» ¿Qué nivel de soporte corresponde?",
     type: "single",
     options: [
       "Nivel 3 — Bajo 🟢",
@@ -1023,7 +1023,7 @@ const QUIZ = [
       "No corresponde a soporte"
     ],
     answer: [2],
-    explanation: "Es un <strong>Nivel 1 (Crítico)</strong>: el flujo de transacciones está completamente bloqueado. Afecta a todos los vendedores y clientes. La prioridad máxima del equipo se activa hasta resolverlo, incluso fuera de horario hábil."
+    explanation: "Es un <strong>Nivel 1 (Crítico)</strong>: el flujo de transacciones está bloqueado o severamente afectado para una parte significativa de la operación. La prioridad máxima del equipo se activa hasta resolverlo, incluso fuera de horario hábil."
   },
   {
     section: "Clasificación · Nivel 2",
@@ -1051,7 +1051,7 @@ const QUIZ = [
       "No se reporta"
     ],
     answer: [2],
-    explanation: "Es <strong>Nivel 3 (Bajo)</strong>: fricción menor que no bloquea la operación. Acá también caen consultas sobre uso/configuración y solicitudes de mejora."
+    explanation: "Es <strong>Nivel 3 (Bajo)</strong>: fricción menor que no bloquea la operación. Errores visuales o con workaround que no afectan el flujo de transacciones."
   },
   {
     section: "SLA · Nivel 1",
@@ -1089,7 +1089,7 @@ const QUIZ = [
     options: [
       "El cliente, según su percepción del impacto",
       "Se negocia caso a caso entre cliente y YOM",
-      "El equipo YOM, según el impacto operacional real",
+      "El equipo YOM, según el impacto operacional verificado",
       "Depende del tamaño de la cuenta"
     ],
     answer: [2],
@@ -1135,7 +1135,7 @@ const QUIZ = [
       "Al Forward Deployed Engineer directamente"
     ],
     answer: [1],
-    explanation: "Durante integración, el contacto es el <strong>PM</strong>. Una vez en producción (post-implementación), el contacto pasa al <strong>CSE</strong>. Si algo llega mal canalizado a soporte, se redirige internamente."
+    explanation: "Durante integración, el contacto es el <strong>PM</strong>. Una vez en producción (post-implementación), el contacto pasa al <strong>CSE</strong>. Es importante dirigir cada consulta al contacto correcto desde el inicio."
   },
   {
     section: "Contenido del ticket",
@@ -1157,13 +1157,13 @@ const QUIZ = [
     question: "Si YOM solicita información adicional en un ticket, ¿cuál es el plazo máximo para responder?",
     type: "single",
     options: [
-      "24 horas hábiles",
+      "48 horas hábiles",
       "3 días hábiles",
       "Una semana",
       "No hay plazo definido"
     ],
     answer: [1],
-    explanation: "El cliente tiene hasta <strong>3 días hábiles</strong> para responder. Si no hay respuesta, el ticket se cierra 24 horas hábiles después del vencimiento. Responder en tiempo y forma es parte del protocolo."
+    explanation: "El cliente tiene hasta <strong>3 días hábiles</strong> para responder. Si no hay respuesta, el ticket se cierra automáticamente. Responder en tiempo y forma es parte del protocolo."
   },
   {
     section: "Canal de atención",
@@ -1302,7 +1302,7 @@ function renderIntro() {
   card.innerHTML = `
     <span class="tag">Capacitación · 30 min</span>
     <h1>Protocolo de <span class="grad">Soporte YOM</span></h1>
-    <p class="subtitle">Una capacitación en dos partes: primero repasamos el protocolo completo, después lo ponés a prueba con un cuestionario interactivo.</p>
+    <p class="subtitle">Una capacitación en dos partes: primero repasamos el protocolo completo, después lo pones a prueba con un cuestionario interactivo.</p>
 
     <div class="intro-grid">
       <div class="intro-item"><div class="num">${LESSONS.length}</div><div class="lbl">Lecciones</div></div>
@@ -1311,8 +1311,8 @@ function renderIntro() {
     </div>
 
     <div class="hint">
-      <strong>Parte 1 · Aprende:</strong> recorré las lecciones a tu ritmo. Cubren niveles de soporte, SLAs, horarios, exclusiones y cómo ingresar un buen ticket.<br>
-      <strong>Parte 2 · Practica:</strong> 14 preguntas con feedback inmediato. No es examen — si te equivocás, aprendés.
+      <strong>Parte 1 · Aprende:</strong> recorre las lecciones a tu ritmo. Cubren niveles de soporte, SLAs, horarios, exclusiones y cómo ingresar un buen ticket.<br>
+      <strong>Parte 2 · Practica:</strong> 14 preguntas con feedback inmediato. No es examen — si te equivocas, aprendes.
     </div>
 
     <div class="actions">
@@ -1387,7 +1387,7 @@ function renderQuestion() {
         : `<button class="btn btn-primary" onclick="showResults()">Ver resultados →</button>`)
     : `<button class="btn btn-primary" onclick="submitAnswer()" ${state.selected.length === 0 ? "disabled" : ""}>Confirmar respuesta</button>`;
   const hint = q.type === "multi" && !state.answered
-    ? `<div class="hint">Selección múltiple — podés marcar más de una opción.</div>` : "";
+    ? `<div class="hint">Selección múltiple — puedes marcar más de una opción.</div>` : "";
   const secondaryBtn = state.index === 0 && !state.answered
     ? `<button class="btn btn-ghost" onclick="backToLessons()">← Volver a lecciones</button>`
     : `<div></div>`;
@@ -1423,9 +1423,9 @@ function isAnswerCorrect(q) {
 function renderResults() {
   const correctCount = state.results.filter(r => r).length;
   const pct = Math.round((correctCount / QUIZ.length) * 100);
-  let emoji = "🎯", msg = "¡Dominás el protocolo!";
+  let emoji = "🎯", msg = "¡Dominas el protocolo!";
   if (pct < 60) { emoji = "📚"; msg = "Vale la pena una segunda pasada"; }
-  else if (pct < 85) { emoji = "👍"; msg = "Vas bien — revisá los puntos marcados"; }
+  else if (pct < 85) { emoji = "👍"; msg = "Vas bien — revisa los puntos marcados"; }
 
   const reviewHtml = QUIZ.map((q, i) => {
     const ok = state.results[i];
@@ -1453,7 +1453,6 @@ function renderResults() {
     <div class="resources">
       <h3>Recursos</h3>
       <a class="res-link" href="https://www.notion.so/protocolodesoporte/Protocolo-Soporte-YOM-197d8139ba4e8091a07ac28a287faf57" target="_blank" rel="noopener">Protocolo completo en Notion <span class="arrow">↗</span></a>
-      <a class="res-link" href="https://soporte.yom.ai" target="_blank" rel="noopener">Portal de Asistencia · soporte.yom.ai <span class="arrow">↗</span></a>
     </div>
     <div class="actions">
       <button class="btn btn-ghost" onclick="restart()">↺ Volver a empezar</button>
